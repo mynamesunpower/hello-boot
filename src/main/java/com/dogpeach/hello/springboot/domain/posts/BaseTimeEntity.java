@@ -17,5 +17,5 @@ public abstract class BaseTimeEntity {
     private LocalDateTime createdDate;
 
     @LastModifiedDate   // 조회한 entity 의 값을 변경할 때 시간이 자동으로 저장됨
-    private LocalDateTime lastModifiedDate;
+    private LocalDateTime modifiedDate;
 }
