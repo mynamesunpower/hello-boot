@@ -1,5 +1,6 @@
 package com.dogpeach.hello.springboot.web;
 
+import com.dogpeach.hello.springboot.config.auth.LoginUser;
 import com.dogpeach.hello.springboot.config.auth.dto.SessionUser;
 import com.dogpeach.hello.springboot.service.posts.PostsService;
 import com.dogpeach.hello.springboot.web.dto.PostsResponseDto;
@@ -19,10 +20,9 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("posts", postsService.findAllDesc());
+    public String index(Model model, @LoginUser SessionUser user) {
 
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        model.addAttribute("posts", postsService.findAllDesc());
 
         if (user != null) {
             model.addAttribute("userName", user.getName());
