@@ -41,3 +41,14 @@ deploy:
     acl: private # zip 파일 접근을 private으로
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
+
+  - provider: codedeploy
+    access_key_id:
+    secret_access_key:
+    bucket: freelec-springboot2-build2
+    key: freelec-springboot2-webservice.zip
+    bundle_type: zip
+    applicaiton: freelec-springboot2-webservice
+    deployment_group: freelec-springboot2-webservice-group
+    region: ap-northeast-2
+    wait-until-deployed: true
