@@ -43,8 +43,8 @@ deploy:
     wait-until-deployed: true
 
   - provider: codedeploy
-    access_key_id:
-    secret_access_key:
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
     bucket: freelec-springboot2-build2
     key: freelec-springboot2-webservice.zip
     bundle_type: zip
