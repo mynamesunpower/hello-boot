@@ -52,7 +52,7 @@ deploy:
     bucket: freelec-springboot2-build2
     key: hello-boot.zip
     bundle_type: zip
-    applicaiton: freelec-springboot2-webservice
+    application: freelec-springboot2-webservice
     deployment_group: freelec-springboot2-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
