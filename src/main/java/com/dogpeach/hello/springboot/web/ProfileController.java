@@ -29,6 +29,6 @@ public class ProfileController {
 
     @GetMapping("/profile2")
     public String testProfile() {
-        return "What The";
+        return "What The hell";
     }
 }
