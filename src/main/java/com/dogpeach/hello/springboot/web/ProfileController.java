@@ -26,4 +26,9 @@ public class ProfileController {
                 .findAny()
                 .orElse(defaultProfile);
     }
+
+    @GetMapping("/profile2")
+    public String testProfile() {
+        return "What The";
+    }
 }
